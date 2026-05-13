@@ -1,4 +1,4 @@
-# import os
+import os
 import logging
 
 # from dotenv import load_dotenv
@@ -66,6 +66,11 @@ app = create_app()
 #     )
 if __name__ == "__main__":
     config = load_app_config()
+
+    app = create_app()
+
+    host = os.getenv("FLASK_HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", os.getenv("FLASK_PORT", "5001")))
 
     app.run(
         host=config.flask_host,
