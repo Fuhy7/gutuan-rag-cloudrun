@@ -1,0 +1,69 @@
+[
+    {
+        "file": "data/raw/排表知识库_movic系列.xlsx",
+        "source_type": "拼谷团排表",
+        "knowledge_type": "schedule",
+        "sheets": [
+            "06_RAG文本块"
+        ],
+        "chunk_size": 600,
+        "chunk_overlap": 80,
+        "rebuild": true,
+        "enabled": true
+    },
+    {
+        "file": "data/raw/排表知识库_aj2026系列.xlsx",
+        "source_type": "拼谷团排表",
+        "knowledge_type": "schedule",
+        "sheets": [
+            "06_RAG文本块"
+        ],
+        "chunk_size": 600,
+        "chunk_overlap": 80,
+        "rebuild": true,
+        "enabled": true
+    },
+    {
+        "file": "data/raw/排表知识库_tv透卡2弹.xlsx",
+        "source_type": "拼谷团排表",
+        "knowledge_type": "schedule",
+        "sheets": [
+            "06_RAG文本块"
+        ],
+        "chunk_size": 600,
+        "chunk_overlap": 80,
+        "rebuild": true,
+        "enabled": true
+    },
+    {
+        "file": "data/raw/团规知识库.xlsx",
+        "source_type": "团规",
+        "knowledge_type": "group_rules",
+        "sheets": [
+            "01_团规"
+        ],
+        "chunk_size": 600,
+        "chunk_overlap": 80,
+        "rebuild": true,
+        "enabled": true
+    },
+    {
+        "file": "data/raw/谷圈术语.xlsx",
+        "source_type": "谷圈术语",
+        "knowledge_type": "terms",
+        "sheets": [
+            "基础术语",
+            "商品种类",
+            "交易买卖",
+            "拼团预售",
+            "避雷黑话",
+            "平台物流",
+            "价格行情",
+            "圈层关系"
+        ],
+        "chunk_size": 500,
+        "chunk_overlap": 50,
+        "rebuild": true,
+        "enabled": true
+    }
+]

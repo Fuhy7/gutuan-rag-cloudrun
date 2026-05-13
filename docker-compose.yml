@@ -1,0 +1,19 @@
+services:
+  gutuan-rag-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gutuan-rag-cloudrun-api
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env
+    environment:
+      FLASK_HOST: 0.0.0.0
+      FLASK_PORT: 5001
+      FLASK_DEBUG: "false"
+      QDRANT_PATH: /app/data/qdrant
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config
+    restart: unless-stopped

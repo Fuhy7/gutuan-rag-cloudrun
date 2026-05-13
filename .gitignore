@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.local
+
+# Local vector/database data
+data/qdrant/
+data/chroma/
+data/app.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Real raw data - do not publish
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.xlsm
+data/raw/*.csv
+
+
+# Logs
+*.log
+logs/
+
+# Excel temporary lock files
+~$*.xlsx
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
