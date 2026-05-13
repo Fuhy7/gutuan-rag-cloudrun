@@ -69,9 +69,12 @@ def load_app_config() -> AppConfig:
     load_dotenv()
 
     return AppConfig(
-        flask_host=os.getenv("FLASK_HOST", "127.0.0.1"),
-        flask_port=_get_int_env("FLASK_PORT", 5001),
-        flask_debug=_get_bool_env("FLASK_DEBUG", True),
+        # flask_host=os.getenv("FLASK_HOST", "127.0.0.1"),
+        # flask_port=_get_int_env("FLASK_PORT", 5001),
+        # flask_debug=_get_bool_env("FLASK_DEBUG", True),
+        flask_host=os.getenv("FLASK_HOST", "0.0.0.0"),
+        flask_port=_get_int_env("FLASK_PORT", _get_int_env("PORT", 5001)),
+        flask_debug=_get_bool_env("FLASK_DEBUG", False),
         cors_enabled=_get_bool_env("CORS_ENABLED", True),
         api_default_top_k=_get_int_env("API_DEFAULT_TOP_K", 12),
         api_max_top_k=_get_int_env("API_MAX_TOP_K", 30),
