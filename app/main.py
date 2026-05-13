@@ -54,18 +54,14 @@ def create_app() -> Flask:
 app = create_app()
 
 
-# if __name__ == "__main__":
-#     host = os.getenv("FLASK_HOST", "127.0.0.1")
-#     port = int(os.getenv("FLASK_PORT", "5001"))
-#     debug = os.getenv("FLASK_DEBUG", "true").lower() == "true"
 
-#     app.run(
-#         host=host,
-#         port=port,
-#         debug=debug,
-#     )
 if __name__ == "__main__":
-    config = load_app_config()
+    import os
+
+    app = create_app()
+
+    host = os.getenv("FLASK_HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", os.getenv("FLASK_PORT", "5001")))
 
     app = create_app()
 
@@ -73,7 +69,9 @@ if __name__ == "__main__":
     port = int(os.getenv("PORT", os.getenv("FLASK_PORT", "5001")))
 
     app.run(
-        host=config.flask_host,
-        port=config.flask_port,
-        debug=config.flask_debug,
+
+        host=host,
+        port=port,
+        debug=False,
+        use_reloader=False,
     )
