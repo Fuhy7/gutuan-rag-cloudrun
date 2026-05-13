@@ -70,7 +70,7 @@ def load_app_config() -> AppConfig:
 
     return AppConfig(
         flask_host=os.getenv("FLASK_HOST", "127.0.0.1"),
-        flask_port=_get_int_env("FLASK_PORT", 5000),
+        flask_port=_get_int_env("FLASK_PORT", 5001),
         flask_debug=_get_bool_env("FLASK_DEBUG", True),
         cors_enabled=_get_bool_env("CORS_ENABLED", True),
         api_default_top_k=_get_int_env("API_DEFAULT_TOP_K", 12),
