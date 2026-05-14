@@ -9,6 +9,7 @@ from app.config import load_app_config
 from app.api.admin import admin_bp
 from app.api.chat import chat_bp
 from app.api.health import health_bp
+from app.api.wechat import wechat_bp
 
 from app.storage.chat_history import init_chat_history_db
 
@@ -48,6 +49,7 @@ def create_app() -> Flask:
     app.register_blueprint(health_bp)
     app.register_blueprint(chat_bp)
     app.register_blueprint(admin_bp)
+    app.register_blueprint(wechat_bp)
     return app
 
 
